@@ -29,7 +29,7 @@ export function loadMenu() {
     const nameSarmaleDiv = document.createElement('div');
     nameSarmaleDiv.textContent = "Sarmale cu Mamaliguta";
     const priceSarmaleDiv = document.createElement('div');
-    priceSarmaleDiv.textContent = "$5.99";
+    priceSarmaleDiv.textContent = "$7.99";
     sarmaleDiv.appendChild(nameSarmaleDiv);
     sarmaleDiv.appendChild(priceSarmaleDiv);
 
@@ -39,7 +39,7 @@ export function loadMenu() {
     const nameMiciDiv = document.createElement('div');
     nameMiciDiv.textContent = "Mititei cu Cartofi Prajiti";
     const priceMiciDiv = document.createElement('div');
-    priceMiciDiv.textContent = "$3.99";
+    priceMiciDiv.textContent = "$9.99";
     miciDiv.appendChild(nameMiciDiv);
     miciDiv.appendChild(priceMiciDiv);
 
