@@ -1,16 +1,47 @@
+import parterImg from '../images/parter.jpg';
+import subsolaImg from '../images/subsola.jpg';
+
 export function loadHome() {
     const content = document.getElementById('content');
+    const header = document.querySelector('header');
+
+    const oldHeadline = header.querySelector('h1');
+    if (oldHeadline) {
+        header.removeChild(oldHeadline);
+    }
+
     const headline = document.createElement('h1');
-    headline.textContent = "Welcome to My Restaurant!";
+    headline.textContent = "Home";
+
+    const title = document.createElement('p');
+    title.textContent = "Welcome to Restaurant La Matei!";
     const description = document.createElement('p');
-    description.textContent = "Best food in town!";
+    description.textContent = "Welcome to Restaurant La Matei! " + 
+    "We proudly serve authentic Romanian dishes made with love, including our famous mici. " +
+    "Come and enjoy the true taste of tradition in a warm and friendly atmosphere.";
+
+    const descDiv = document.createElement('div');
+
+    const hours = document.createElement('p');
+    hours.textContent = "Open daily: 7:00 AM – 11:00 PM"
+
+    const imgOne = document.createElement('img');
+    imgOne.src = parterImg;
+    imgOne.alt = 'Restaurant upstairs';
+
+    const imgTwo = document.createElement('img');
+    imgTwo.src = subsolaImg;
+    imgTwo.alt = 'Restaurant downstairs';
   
 
     const image = document.createElement('img');
-    image.src = 'https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg';
 
-    content.appendChild(headline);
-    content.appendChild(description);
-    content.appendChild(image);
+    header.appendChild(headline);
+    content.appendChild(imgOne);
+    content.appendChild(descDiv);
+    content.appendChild(imgTwo);
 
+    descDiv.appendChild(title);
+    descDiv.appendChild(description);
+    descDiv.appendChild(hours);
 }
