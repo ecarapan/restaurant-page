@@ -69,7 +69,6 @@ button.active {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 #content img {
@@ -94,7 +93,7 @@ button.active {
   display: flex;
 }
 
-.menu-container div {
+.menu-container > div {
   background-color: white;
   min-width: 400px;   /* ensures div is visible */
   min-height: 400px;  /* ensures div is visible */
@@ -104,6 +103,11 @@ button.active {
   background-color: rgba(0,0,0,0.5);
   background-blend-mode: darken;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.menu-container > div > div {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
 }
 
 .ciorba {
